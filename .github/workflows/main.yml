@@ -1,0 +1,7 @@
+on: [push, delete, pull_request, workflow_dispatch, create]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github }}
