@@ -4,7 +4,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ toJson(github) }}"
-      - run: echo "${{ toJson(job) }}"
-      - run: echo "${{ toJson(steps) }}"
-      - run: echo "${{ toJson(runner) }}"
+      - run: echo "github:${{ toJson(github) }}"
+      - run: echo "event:${{ toJson(github.event) }}"
+      - run: echo "job:${{ toJson(job) }}"
+      - run: echo "steps:${{ toJson(steps) }}"
+      - run: echo "runner:${{ toJson(runner) }}"
